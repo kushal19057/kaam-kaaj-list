@@ -1,0 +1,23 @@
+# README
+## Highlights
+- Create virtualenv
+- endpoints
+- static and templates directory
+- render_template
+- bootstrap for css
+- Add a heading
+- Add a form for todo list input
+- Add a table to show current to dos
+- database - flask-sql-alchemy - [documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
+- bind your app to SQLAlchemy database
+- SQLite viewer to see kaam.db (github link website) - [link](https://inloop.github.io/sqlite-viewer/)
+- Add a default to do entry whenever a new user enters the website
+- check if default add functionality is working or not by going to the sqlite github db viewer
+- install Jinja 2 snippet kit extension in VSCode
+- intro to jinja templating
+- jinja 2 templating engine for loops to read through database records
+- dont use current.id as # since ... PK vs number of item on list issue - incrementatal series kaam nahi karegi
+- form ko working banao
+- remove default entry functionality
+- add actions columns for each to do item with endpoints
+- CRUD operations in database
