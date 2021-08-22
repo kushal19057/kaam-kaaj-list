@@ -3,16 +3,16 @@
 {% block body %}
     <div class="container my-3">
         <h2>Update Kaam-Kaaj details</h2>
-        <form action="/" method="POST">
+        <form action="/update/{{todo.sno}}" method="POST">
             <div class="mb-3">
                 <label for="title" class="form-label">Kaam Ka Naam</label>
-                <input type="text" class="form-control" name="title" id="title">
+                <input type="text" class="form-control" value="{{updated_kaam.title}}" name="title" id="title">
             </div>
             <div class="mb-3">
                 <label for="desc" class="form-label">Kaam Ki Details</label>
-                <input type="text" class="form-control" name="desc" id="desc">
+                <input type="text" class="form-control" value={{updated_kaam.desc}} name="desc" id="desc">
             </div>
-            <button type="submit" class="btn btn-outline-dark">Submit</button>
+            <button type="submit" class="btn btn-outline-dark">Submit and Update</button>
         </form>
     </div>
 {% endblock body %}
