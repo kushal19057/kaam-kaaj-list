@@ -25,10 +25,6 @@ def home():
         db.session().add(upcoming_entry)
         db.session().commit()
 
-    first = ToDoItem(title="First", desc="First First. Start Investing.")
-    db.session().add(first)
-    db.session().commit()
-
     return  render_template('index.html', todolist=ToDoItem.query.all())
 
 # @app.route("/delete/<int:sno>")
