@@ -46,3 +46,15 @@
 01:45:28 – Final view of To-do app
 01:46:45 – Where to go from here
 ```
+
+- deploying to heroku
+
+```
+pip install gunicorn
+```
+
+- freeze requirements
+
+```
+pip freeze > requirements.txt
+```
