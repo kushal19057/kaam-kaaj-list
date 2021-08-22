@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///kaam.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///cache.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -27,12 +27,12 @@ def home():
 
     return  render_template('index.html', todolist=ToDoItem.query.all())
 
-# @app.route("/delete/<int:sno>")
-# def delete():
-#     deleted_kaam = KaamKaaj.query.filter_by(sno=sno).first()
-#     db.session().delete(deleted_kaam)
-#     db.session().commit()
-#     return redirect("/")
+@app.route("/delete/<int:sno>")
+def delete(sno):
+    deleted_kaam = ToDoItem.query.filter_by(sno=sno).first()
+    db.session().delete(deleted_kaam)
+    db.session().commit()
+    return redirect("/")
 
 
 if __name__ == '__main__':

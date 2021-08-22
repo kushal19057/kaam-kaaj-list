@@ -33,6 +33,9 @@
     </div>
     <div class="container my-3">
         <h2>Abhi ka Kaam-Kaaj</h2>
+        {% if todolist|length == 0 %}
+            <p class="lead">Yay! No Work. Enjoy while it lasts.</p>
+        {% else %}
         <table class="table">
             <thead>
                 <tr>
@@ -58,6 +61,7 @@
                 {% endfor %} 
             </tbody>
         </table>
+        {% endif %}
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
