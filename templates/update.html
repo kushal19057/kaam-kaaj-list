@@ -3,7 +3,7 @@
 {% block body %}
     <div class="container my-3">
         <h2>Update Kaam-Kaaj details</h2>
-        <form action="/update/{{todo.sno}}" method="POST">
+        <form action="/update/{{updated_kaam.sno}}" method="POST">
             <div class="mb-3">
                 <label for="title" class="form-label">Kaam Ka Naam</label>
                 <input type="text" class="form-control" value="{{updated_kaam.title}}" name="title" id="title">

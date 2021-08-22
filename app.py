@@ -25,7 +25,7 @@ def home():
         db.session().add(upcoming_entry)
         db.session().commit()
 
-    return  render_template('index.html', todolist=ToDoItem.query.all())
+    return render_template('index.html', todolist=ToDoItem.query.all())
 
 @app.route("/delete/<int:sno>")
 def delete(sno):
@@ -34,6 +34,20 @@ def delete(sno):
     db.session().commit()
     return redirect("/")
 
+@app.route("/update/<int:sno>", methods=['GET', 'POST'])
+def update(sno):
+    if request.method == 'POST':
+        title = request.form['title']
+        desc = request.form['desc']
+        updated_kaam = ToDoItem.query.filter_by(sno=sno).first()
+        updated_kaam.title = title
+        updated_kaam.desc = desc
+        db.session().add(updated_kaam)
+        db.session().commit()
+        return redirect("/")
+    
+    updated_kaam = ToDoItem.query.filter_by(sno=sno).first()
+    return render_template('update.html', updated_kaam=updated_kaam)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
