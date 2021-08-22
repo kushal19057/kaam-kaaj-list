@@ -50,4 +50,4 @@ def update(sno):
     return render_template('update.html', updated_kaam=updated_kaam)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=False, port=8000)
