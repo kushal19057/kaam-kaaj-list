@@ -10,23 +10,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <title>Kaam-Kaaj App</title>
+    <title>Kaam-Kaaj | To-Do List App</title>
 </head>
 
 <body>
     <div class="container">
-        <h1><a href="/" alt="click to reload">Kaam-Kaaj App</a></h1>
+        <h1>Kaam-Kaaj | To-Do List App</h1>
     </div>
     <div class="container my-3">
         <h2>Add some Kaam-Kaaj</h2>
         <form action="/" method="POST">
             <div class="mb-3">
-                <label for="exampleInputTask1" class="form-label">Kaam Ka Naam</label>
-                <input type="text" class="form-control" name="title" id="exampleInputTask1">
+                <label for="title" class="form-label">Kaam Ka Naam</label>
+                <input type="text" class="form-control" name="title" id="title">
             </div>
             <div class="mb-3">
-                <label for="exampleInputDetails1" class="form-label">Kaam Ki Details</label>
-                <input type="text" class="form-control" name="desc" id="exampleInputDetails1">
+                <label for="desc" class="form-label">Kaam Ki Details</label>
+                <input type="text" class="form-control" name="desc" id="desc">
             </div>
             <button type="submit" class="btn btn-outline-dark">Submit</button>
         </form>
@@ -36,15 +36,15 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Kaam-Title</th>
-                    <th scope="col">Kaam-Desc</th>
-                    <th scope="col">Kaam-DateCreated</th>
+                    <th scope="col">S.No.</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Desc</th>
+                    <th scope="col">DateCreated</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                {% for current in all_kaam %}
+                {% for current in todolist %}
                 <tr>
                     <th scope="row">{{loop.index}}</th>
                     <td>{{current.title}}</td>

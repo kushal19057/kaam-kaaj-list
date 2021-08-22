@@ -21,3 +21,28 @@
 - remove default entry functionality
 - add actions columns for each to do item with endpoints
 - CRUD operations in database
+
+```
+00:00 – Introduction
+02:17 – Download & Installing VS Code
+04:08 – Installing Necessary Modules
+07:39 – Activating Virtual Environment
+09:19 – Installing flask module
+10:26 – Creating a flask minimal app
+18:03 – static and templates directories
+23:23 – Making an app beautiful by adding HTML
+36:49 – Creating a database for the To-Do App
+39:01 – SQLAlchemy database URI
+49:03 – Querying Records
+54:44 – Adding Loop Counter
+56:50 – Getting forms working
+01:17:00 – Updating To-do Items
+01:17:12 – Template Inheritance
+01:18:12 – Creating a base template
+01:23:21 – CRUD operation
+01:23:42 – Making update operation work
+01:30:11 – Free JavaScript Course 
+01:31:15 – Deploying To-dos App on Heroku
+01:45:28 – Final view of To-do app
+01:46:45 – Where to go from here
+```
